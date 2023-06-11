@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Informatik - Doodle Jump</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="https://key.pics/client/key.pics.min.js"></script>
+
+    <div class="container">
+        <canvas id="canvas">
+            Stelle sicher, dass der verwendete Browser "HTML5" Dokumente
+            unterstützt!
+        </canvas>
+
+        <div id="start-main">
+
+            <h1>Doodle Jump</h1>
+
+            <p class="hilfe">
+                Tastenbelegung:
+                <br>
+                <!-- https://de.piliapp.com/symbol/ -->
+                Nach links: <span class="key left">⍇</span>
+                <br> Nach rechts: <span class="key right">⍈</span>
+                <br> Reset: <span class="enter">ENTER</span>
+            </p>
+
+            <a class="button" href="javascript:init()">Start...</a>
+        </div>
+
+        <div id="lost-main">
+
+            <div class="lost">
+                <h1>Verloren</h1>
+                <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="squiggly-0">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+                        <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+                    </filter>
+                    <filter id="squiggly-1">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+                    </filter>
+
+                    <filter id="squiggly-2">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+                    </filter>
+                    <filter id="squiggly-3">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+                    </filter>
+                    <filter id="squiggly-4">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+                    </filter>
+                </defs>
+            </svg>
+            </div>
+
+            <h5 id="finish_score">Du hast 0 Punkte erreicht</h5>
+            <a class="button" href="javascript:reset()">Hauptmenü</a>
+
+
+            <p id="board">
+                <B><U>Bestes Ergebnis:</U></B>
+            </p>
+            <p id="bestround">[coming soon]</p>
+
+
+        </div>
+
+        <img id="graphic" src="./images/graphic.png" />
+
+        <div id="result">
+            <p id="score">0</p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(82, 255, 47);
+    background-image: url("./images/background.png");
+    font-family: "Gloria Hallelujah", cursive;
+}
+
+.container {
+    height: 852px;
+    width: 622px;
+    position: relative;
+    margin: 20px auto 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+canvas {
+    height: 852px;
+    width: 622px;
+    display: block;
+    background: url("./images/gamebackground.png") top left;
+}
+
+h5 {
+    text-align: right;
+    margin: 80px 165px;
+    color: #5e96be;
+    font-size: 20px;
+}
+
+h5 a {
+    color: #5a5816;
+}
+
+h2,
+h5,
+h1 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 80px;
+    color: #5a5816;
+    transform: rotate(-10deg);
+    margin-top: 20px;
+    margin-bottom: -35px;
+}
+
+#start-main,
+#lost-main {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#start-main h1 {
+    margin-top: 15px;
+}
+
+#start-main .hilfe {
+    margin-top: 20px;
+}
+
+#board {
+    font-size: 22px;
+}
+
+#bestround {
+    font-size: 22px;
+}
+
+#result {
+    width: 622px;
+    height: 50px;
+    background: rgba(182, 200, 220, 0.7);
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: -1;
+    border-image: url("./images/line.png") 100 5 round;
+}
+
+#result p {
+    font-size: 25px;
+    padding: 20;
+    line-height: 47px;
+    margin: 0px 0 0 15px;
+}
+
+img {
+    display: none;
+}
+
+#lost-main {
+    visibility: hidden;
+}
+
+.button {
+    width: 105px;
+    height: 31px;
+    background: url("./images/graphic.png") 0 0 no-repeat;
+    display: block;
+    color: #000;
+    font-size: 16px;
+    line-height: 31px;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    margin-left: -53px;
+}
+
+.hilfe {
+    position: absolute;
+    right: 250px;
+    top: 150px;
+    margin: 0;
+    color: rgb(10, 32, 6);
+}
+
+.hilfe .key {
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    background: url("./images/graphic.png") no-repeat;
+    text-indent: -9999px;
+    display: inline-block;
+}
+
+.hilfe .key.left {
+    background-position: -92px -621px;
+}
+
+.hilfe .key.right {
+    background-position: -92px -641px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700");
+.lost body {
+    font-family: "Amatic SC", sans-serif;
+}
+
+.lost {
+    -webkit-animation: squiggly-anim 0.34s linear infinite;
+    animation: squiggly-anim 0.34s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    outline: none;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: -100px;
+}
+
+@-webkit-keyframes squiggly-anim {
+    0% {
+        filter: url("#squiggly-0");
+    }
+    25% {
+        filter: url("#squiggly-1");
+    }
+    50% {
+        filter: url("#squiggly-2");
+    }
+    75% {
+        filter: url("#squiggly-3");
+    }
+    100% {
+        filter: url("#squiggly-4");
+    }
+}
+
+@keyframes squiggly-anim {
+    0% {
+        filter: url("#squiggly-0");
+    }
+    25% {
+        filter: url("#squiggly-1");
+    }
+    50% {
+        filter: url("#squiggly-2");
+    }
+    75% {
+        filter: url("#squiggly-3");
+    }
+    100% {
+        filter: url("#squiggly-4");
+    }
+}
